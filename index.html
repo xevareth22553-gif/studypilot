@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudyPilot — Study Smarter</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #080b14;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 92%;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    /* NAVBAR */
+    nav {
+      padding: 20px 0;
+      border-bottom: 1px solid #1c2233;
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    .logo span {
+      color: #7c8cff;
+    }
+
+    .nav-button {
+      background: #ffffff;
+      color: #080b14;
+      padding: 9px 16px;
+      border-radius: 9px;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding: 85px 0 70px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 7px 13px;
+      border: 1px solid #303852;
+      border-radius: 30px;
+      color: #aeb8ff;
+      font-size: 13px;
+      margin-bottom: 22px;
+      background: #101527;
+    }
+
+    h1 {
+      font-size: clamp(42px, 9vw, 76px);
+      line-height: 1;
+      letter-spacing: -3px;
+      margin-bottom: 25px;
+    }
+
+    .gradient {
+      background: linear-gradient(90deg, #8b96ff, #b5c0ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: auto;
+      color: #aeb4c7;
+      font-size: 18px;
+    }
+
+    .hero-buttons {
+      margin-top: 32px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .primary {
+      background: #ffffff;
+      color: #080b14;
+      padding: 14px 23px;
+      border-radius: 10px;
+      font-weight: 800;
+    }
+
+    .secondary {
+      border: 1px solid #343b52;
+      padding: 14px 23px;
+      border-radius: 10px;
+      color: #dce0ed;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 65px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 34px;
+      margin-bottom: 12px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: #9ba3b7;
+      max-width: 650px;
+      margin: 0 auto 35px;
+    }
+
+    /* CARDS */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: #101522;
+      border: 1px solid #20283b;
+      border-radius: 16px;
+      padding: 25px;
+    }
+
+    .icon {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      margin-bottom: 8px;
+      font-size: 19px;
+    }
+
+    .card p {
+      color: #9da5b8;
+      font-size: 15px;
+    }
+
+    /* PRODUCT */
+    .product {
+      background: linear-gradient(135deg, #11172a, #0b0f1c);
+      border: 1px solid #29324a;
+      border-radius: 22px;
+      padding: 35px;
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 35px;
+      align-items: center;
+    }
+
+    .product h2 {
+      font-size: 35px;
+      margin-bottom: 15px;
+    }
+
+    .product p {
+      color: #aab1c3;
+    }
+
+    .checklist {
+      margin: 22px 0;
+      list-style: none;
+    }
+
+    .checklist li {
+      margin: 9px 0;
+      color: #d9ddec;
+    }
+
+    .checklist li::before {
+      content: "✓";
+      margin-right: 9px;
+      color: #9ca8ff;
+      font-weight: bold;
+    }
+
+    .price-box {
+      text-align: center;
+      background: #0b0f1b;
+      border: 1px solid #29324a;
+      padding: 30px;
+      border-radius: 18px;
+    }
+
+    .price {
+      font-size: 42px;
+      font-weight: 800;
+      margin: 10px 0 20px;
+    }
+
+    .buy-button {
+      display: block;
+      background: #ffffff;
+      color: #080b14;
+      padding: 14px;
+      border-radius: 10px;
+      font-weight: 800;
+    }
+
+    .small {
+      color: #747d93;
+      font-size: 12px;
+      margin-top: 12px;
+    }
+
+    /* PROMPTS */
+    .prompt {
+      padding: 18px;
+      background: #101522;
+      border: 1px solid #20283b;
+      border-radius: 12px;
+      color: #dce1ef;
+      margin-bottom: 10px;
+    }
+
+    .prompt span {
+      color: #8793ff;
+      font-weight: 800;
+      margin-right: 8px;
+    }
+
+    /* FAQ */
+    .faq {
+      max-width: 750px;
+      margin: auto;
+    }
+
+    details {
+      background: #101522;
+      border: 1px solid #20283b;
+      border-radius: 12px;
+      padding: 18px;
+      margin-bottom: 10px;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    details p {
+      color: #9da5b8;
+      margin-top: 12px;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid #1c2233;
+      padding: 30px 0;
+      text-align: center;
+      color: #747d93;
+      font-size: 13px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 750px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .product {
+        grid-template-columns: 1fr;
+        padding: 25px;
+      }
+
+      h1 {
+        letter-spacing: -2px;
+      }
+
+      .hero {
+        padding-top: 65px;
+      }
+
+      .product h2 {
+        font-size: 29px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="container nav-inner">
+      <div class="logo">Study<span>Pilot</span></div>
+      <a href="#product" class="nav-button">View Product</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <div class="badge">The Student Study System</div>
+
+        <h1>
+          Study smarter.<br>
+          <span class="gradient">Not harder.</span>
+        </h1>
+
+        <p>
+          StudyPilot gives students a simple system for planning,
+          focusing, learning, recalling, and preparing for exams.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#product" class="primary">Explore StudyPilot</a>
+          <a href="#prompts" class="secondary">See AI Prompts</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section>
+      <div class="container">
+        <h2 class="section-title">A better way to study</h2>
+
+        <p class="section-subtitle">
+          Stop guessing what to study next. Follow a simple system
+          designed to turn scattered studying into organized progress.
+        </p>
+
+        <div class="grid">
+
+          <div class="card">
+            <div class="icon">🎯</div>
+            <h3>Plan</h3>
+            <p>
+              Turn your subjects and goals into a clear study plan.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="icon">🧠</div>
+            <h3>Learn</h3>
+            <p>
+              Use active recall and better learning techniques instead
+              of endlessly rereading.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="icon">📈</div>
+            <h3>Improve</h3>
+            <p>
+              Find weak areas, review mistakes, and keep improving.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCT -->
+    <section id="product">
+      <div class="container">
+
+        <div class="product">
+
+          <div>
+            <div class="badge">StudyPilot Student Bundle</div>
+
+            <h2>Everything you need to organize your studying.</h2>
+
+            <p>
+              A practical digital study system built for students
+              who want more structure and less procrastination.
+            </p>
+
+            <ul class="checklist">
+              <li>7-Day Study Reset</li>
+              <li>Daily Study Planner</li>
+              <li>Weekly Study Planner</li>
+              <li>Focus & Anti-Procrastination System</li>
+              <li>Active Recall & Revision System</li>
+              <li>Exam Preparation Checklist</li>
+              <li>AI Study Guide</li>
+              <li>15 AI Study Prompts</li>
+                <li>10-Minute Rescue Study Plan</li>
+</ul>
+</div>
+
+<div class="price-box">
+  <div>StudyPilot Bundle</div>
+  <div class="price">Coming Soon</div>
+
+  <a href="#" class="buy-button"
+     onclick="alert('Payment will be connected soon!'); return false;">
+    Get StudyPilot
+  </a>
+
+  <div class="small">
+    Secure digital delivery coming soon.
+  </div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="prompts">
+  <div class="container">
+    <h2 class="section-title">15 AI Study Prompts</h2>
+
+    <p class="section-subtitle">
+      Use AI as a study partner instead of simply asking it for answers.
+    </p>
+
+    <div class="prompt"><span>01</span>Explain [topic] simply, then give me 5 questions.</div>
+    <div class="prompt"><span>02</span>Teach me [topic] step-by-step and check my understanding.</div>
+    <div class="prompt"><span>03</span>Quiz me on [topic] one question at a time.</div>
+    <div class="prompt"><span>04</span>Create 10 practice questions from easy to difficult.</div>
+    <div class="prompt"><span>05</span>Create a short exam-style test and grade it after I finish.</div>
+    <div class="prompt"><span>06</span>Review my answer and tell me what I got right and what I missed.</div>
+    <div class="prompt"><span>07</span>Compare [A] and [B] in a simple table.</div>
+    <div class="prompt"><span>08</span>Give me a real-world example of [concept].</div>
+    <div class="prompt"><span>09</span>Turn my notes into active-recall questions.</div>
+    <div class="prompt"><span>10</span>Turn this chapter into a one-page revision sheet.</div>
+    <div class="prompt"><span>11</span>Separate these notes into must-know, useful, and optional.</div>
+    <div class="prompt"><span>12</span>Make me a 7-day study plan.</div>
+    <div class="prompt"><span>13</span>Create a mnemonic for [concept].</div>
+    <div class="prompt"><span>14</span>Act as a strict but helpful examiner.</div>
+    <div class="prompt"><span>15</span>Prioritize what I should study for my exam.</div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2 class="section-title">FAQ</h2>
+
+    <div class="faq">
+
+      <details>
+        <summary>What is StudyPilot?</summary>
+        <p>
+          StudyPilot is a digital study system designed to help students
+          organize studying and prepare for exams.
+        </p>
+      </details>
+
+      <details>
+        <summary>Is StudyPilot a physical product?</summary>
+        <p>
+          No. StudyPilot is a digital product.
+        </p>
+      </details>
+
+      <details>
+        <summary>When can I buy it?</summary>
+        <p>
+          The product is currently being prepared. Payment and digital
+          delivery will be connected before launch.
+        </p>
+      </details>
+
+      <details>
+        <summary>Can I use the AI prompts with ChatGPT?</summary>
+        <p>
+          Yes. The prompts are designed to help you use AI as a learning
+          and revision partner.
+        </p>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    © 2026 StudyPilot. Built for smarter studying.
+  </div>
+</footer>
+
+</body>
+</html>
