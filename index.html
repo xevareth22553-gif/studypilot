@@ -1,157 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>StudyPilot</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#060a12;color:#fff;font-family:Arial;text-align:center}nav{padding:18px;border-bottom:1px solid #26344d;background:#090e18;text-align:left;font-weight:bold}nav span{color:#62a4ff}.hero{padding:80px 20px;background:radial-gradient(circle at top,#17386d,#060a12 55%)}.tag{display:inline-block;padding:6px 12px;border:1px solid #416a9e;border-radius:20px;color:#8dbbff;font-size:12px}h1{font-size:48px;line-height:1.05;margin:22px 0}.blue{color:#72aaff}.hero p{max-width:600px;margin:auto;color:#9aa8bd;font-size:17px}.btn{display:inline-block;margin:25px 5px;padding:13px 20px;border-radius:9px;background:#fff;color:#050810;font-weight:bold}.dark{background:#101a2a;color:#dce5f5;border:1px solid #344867}.box{width:90%;max-width:850px;margin:40px auto;padding:25px;background:#0d1523;border:1px solid #29405f;border-radius:18px}.cards{display:flex;gap:10px}.card{flex:1;padding:25px 10px;background:#111d30;border:1px solid #293b56;border-radius:10px;color:#a9c4ed}section{padding:65px 20px}.features{display:flex;gap:15px;max-width:900px;margin:auto}.feature{flex:1;padding:25px;background:#0d1523;border:1px solid #253750;border-radius:15px}.feature p{color:#929fb4}.product{max-width:850px;margin:auto;padding:30px;background:#101c2e;border:1px solid #304766;border-radius:18px}.product li{text-align:left;margin:8px;color:#dce5f2}.faq{max-width:700px;margin:auto}details{text-align:left;padding:15px;margin:8px;background:#0d1523;border:1px solid #253750;border-radius:10px}footer{padding:30px;color:#69778d;border-top:1px solid #1b2940}@media(max-width:600px){.cards,.features{flex-direction:column}h1{font-size:42px}}
+</style>
+</head>
+<body>
+<nav>Study<span>Pilot</span></nav>
 
-  <title>StudyPilot — Your Study System</title>
+<div class="hero">
+<div class="tag">THE STUDENT STUDY SYSTEM</div>
+<h1>Study smarter.<br><span class="blue">Build your system.</span></h1>
+<p>A simple digital study system to help students plan, focus, revise and prepare for exams.</p>
+<a class="btn" href="#product">Explore StudyPilot →</a>
+<a class="btn dark" href="#features">See What's Inside</a>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<div class="box">
+<b>STUDYPILOT SYSTEM</b>
+<div class="cards">
+<div class="card">Weekly Planner</div>
+<div class="card">Revision Tracker</div>
+<div class="card">Exam Roadmap</div>
+</div>
+</div>
+</div>
 
-    html {
-      scroll-behavior: smooth;
-    }
+<section id="features">
+<h2>A better way to study.</h2>
+<p>Turn scattered studying into an organized system.</p>
+<div class="features">
+<div class="feature">🎯<h3>Plan</h3><p>Turn goals into a clear study plan.</p></div>
+<div class="feature">🧠<h3>Learn</h3><p>Use active recall and focused learning.</p></div>
+<div class="feature">📈<h3>Improve</h3><p>Track revision and build consistency.</p></div>
+</div>
+</section>
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background:
-        radial-gradient(circle at 50% -10%, #18295c 0%, transparent 35%),
-        radial-gradient(circle at 90% 30%, #102a42 0%, transparent 25%),
-        #050811;
-      color: #fff;
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
+<section id="product">
+<div class="product">
+<h2>Your study system, in one place.</h2>
+<p>A practical digital product for students.</p>
+<ul>
+<li>7-Day Study Reset</li>
+<li>Daily & Weekly Study Planners</li>
+<li>Focus & Anti-Procrastination System</li>
+<li>Active Recall & Revision System</li>
+<li>Exam Preparation Checklist</li>
+<li>AI Study Guide + 15 AI Prompts</li>
+<li>10-Minute Rescue Study Plan</li>
+</ul>
+<h2>Coming Soon</h2>
+</div>
+</section>
 
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      opacity: 0.18;
-      background-image:
-        linear-gradient(rgba(80,130,255,.08) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(80,130,255,.08) 1px, transparent 1px);
-      background-size: 45px 45px;
-      mask-image: linear-gradient(to bottom, black, transparent 80%);
-    }
+<section>
+<h2>FAQ</h2>
+<div class="faq">
+<details><summary>What is StudyPilot?</summary><p>A digital study system for students.</p></details>
+<details><summary>Is it a physical product?</summary><p>No. It is a digital product.</p></details>
+<details><summary>When can I buy it?</summary><p>Payment and delivery will be connected before launch.</p></details>
+</div>
+</section>
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .container {
-      width: 92%;
-      max-width: 1150px;
-      margin: auto;
-    }
-
-    /* NAVBAR */
-
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      padding: 17px 0;
-      border-bottom: 1px solid rgba(120,150,220,.15);
-      background: rgba(5,8,17,.78);
-      backdrop-filter: blur(16px);
-    }
-
-    .nav-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      font-size: 22px;
-      font-weight: 900;
-      letter-spacing: -0.7px;
-    }
-
-    .logo span {
-      color: #66aaff;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 25px;
-      align-items: center;
-      color: #9faac2;
-      font-size: 14px;
-    }
-
-    .nav-links a:hover {
-      color: #fff;
-    }
-
-    .nav-button {
-      background: linear-gradient(135deg, #fff, #cddcff);
-      color: #050811;
-      padding: 9px 16px;
-      border-radius: 9px;
-      font-weight: 800;
-      font-size: 14px;
-    }
-
-    /* HERO */
-
-    .hero {
-      position: relative;
-      text-align: center;
-      padding: 105px 0 85px;
-    }
-
-    .hero-glow {
-      position: absolute;
-      width: 500px;
-      height: 300px;
-      left: 50%;
-      top: 30px;
-      transform: translateX(-50%);
-      background: #286cff;
-      filter: blur(150px);
-      opacity: .12;
-      pointer-events: none;
-    }
-
-    .badge {
-      display: inline-block;
-      padding: 7px 14px;
-      border: 1px solid rgba(100,160,255,.35);
-      border-radius: 50px;
-      color: #9fc1ff;
-      font-size: 12px;
-      letter-spacing: .5px;
-      background: rgba(35,65,130,.18);
-      box-shadow: 0 0 25px rgba(50,120,255,.08);
-      margin-bottom: 25px;
-    }
-
-    h1 {
-      position: relative;
-      font-size: clamp(48px, 9vw, 86px);
-      line-height: .98;
-      letter-spacing: -4px;
-      margin-bottom: 27px;
-      font-weight: 900;
-    }
-
-    .gradient {
-      background: linear-gradient(90deg, #ffffff, #76aaff, #9c8cff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .hero p {
-      position: relative;
-      max-width: 670px;
-      margin: auto;
-     
+<footer>© 2026 StudyPilot. Built for smarter studying.</footer>
+</body>
+</html>
